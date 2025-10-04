@@ -17,7 +17,7 @@ import java.math.BigDecimal;
 
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-    Button btn0, btn1, btn2, btn3, btn_clear, btn_plus, btn_minus, btn_dot, btn_equal;
+    Button btn0, btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn_clear, btn_plus, btn_minus, btn_mult, btn_dot, btn_equal;
     TextView text_display;
 
     // This is to evaluate the math expression
@@ -31,8 +31,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btn1 = (Button) findViewById(R.id.btn1);
         btn2 = (Button) findViewById(R.id.btn2);
         btn3 = (Button) findViewById(R.id.btn3);
+        btn4 = (Button) findViewById(R.id.btn4);
+        btn5 = (Button) findViewById(R.id.btn5);
+        btn6 = (Button) findViewById(R.id.btn6);
+        btn7 = (Button) findViewById(R.id.btn7);
         btn_plus = (Button) findViewById(R.id.btn_plus);
         btn_minus = (Button) findViewById(R.id.btn_minus);
+        btn_mult = (Button) findViewById(R.id.btn_mult);
         btn_dot = (Button) findViewById(R.id.btn_dot);
         btn_equal = (Button) findViewById(R.id.btn_equal);
         btn_clear = (Button) findViewById(R.id.btn_clear);
@@ -46,8 +51,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btn1.setOnClickListener(this);
         btn2.setOnClickListener(this);
         btn3.setOnClickListener(this);
+        btn4.setOnClickListener(this);
+        btn5.setOnClickListener(this);
+        btn6.setOnClickListener(this);
+        btn7.setOnClickListener(this);
         btn_plus.setOnClickListener(this);
         btn_minus.setOnClickListener(this);
+        btn_mult.setOnClickListener(this);
         btn_dot.setOnClickListener(this);
         btn_equal.setOnClickListener(this);
         btn_clear.setOnClickListener(this);
@@ -68,11 +78,26 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btn3:
                 addNumber("3");
                 break;
+            case R.id.btn4:
+                addNumber("4");
+                break;
+            case R.id.btn5:
+                addNumber("5");
+                break;
+            case R.id.btn6:
+                addNumber("6");
+                break;
+            case R.id.btn7:
+                addNumber("7");
+                break;
             case R.id.btn_plus:
                 addNumber("+");
                 break;
             case R.id.btn_minus:
                 addNumber("-");
+                break;
+            case R.id.btn_mult:
+                addNumber("×");
                 break;
             case R.id.btn_dot:
                 addNumber(".");
