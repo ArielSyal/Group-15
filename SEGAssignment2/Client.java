@@ -21,21 +21,19 @@ public abstract class Client {
         this.loyaltyProgram = null;
     }
 
-    /* Association: BankAccount (1..* at BankAccount side) */
     public void addBankAccount(BankAccount newAccount) {
         if (newAccount == null) {
             System.out.println("Cannot add empty account.");
             return;
         }
         if (accounts.contains(newAccount)) {
-            System.out.println("Account already exists for client " + name + ".");
+            System.out.println("Account already exists.");
             return;
         }
         if (newAccount.getOwner() != null && newAccount.getOwner() != this) {
             System.out.println("Account is owned by a different client.");
             return;
         }
-        // set owner and add
         newAccount.setOwner(this);
         accounts.add(newAccount);
         System.out.println("Account has been added for client " + name + ".");
@@ -43,7 +41,7 @@ public abstract class Client {
 
     public void removeBankAccount(BankAccount deleteAccount) {
         if (deleteAccount == null || !accounts.contains(deleteAccount)) {
-            System.out.println("Account cannot be found for client " + name + ".");
+            System.out.println("Account cannot be found.");
             return;
         }
         if (accounts.size() <= 1) { // multiplicity: client must retain at least one account
@@ -66,7 +64,6 @@ public abstract class Client {
         }
     }
 
-    /* Association: LoyaltyProgram (0..1) */
     public void addLoyaltyProgram(LoyaltyProgram rewards) {
         if (rewards == null) {
             System.out.println("Cannot add a null loyalty program.");
@@ -86,21 +83,12 @@ public abstract class Client {
             System.out.println(name + " isn't a part of the loyalty program.");
             return;
         }
-        LoyaltyProgram temp = this.loyaltyProgram;
+        this.loyaltyProgram.removeClient(this);
         this.loyaltyProgram = null;
-        temp.removeClient(this);
         System.out.println(name + " has been removed from the loyalty program.");
     }
 
-    public void listLoyalty() {
-        if (this.loyaltyProgram == null) {
-            System.out.println(name + " is not part of any loyalty program.");
-        } else {
-            System.out.println(name + " is part of loyalty program: " + this.loyaltyProgram.getTierLevel());
-        }
-    }
 
-    /* Getters and setters (as on UML) */
     public String getClientId() {
         return clientId;
     }
