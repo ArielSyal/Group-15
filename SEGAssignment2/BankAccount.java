@@ -1,22 +1,26 @@
 
 public abstract class BankAccount {
-    private int accountNumber;
+    private long id;
     private double balance;
     private Client owner;
 
-    public BankAccount(int accountNumber, double balance, Client owner) {
-        this.accountNumber = accountNumber;
+    public BankAccount(long id, double balance, Client owner) {
+        this.id = id;
         this.balance = balance;
         this.owner = owner;
     }
 
-    public int getId() {
-        return accountNumber;
+    public long getId() {
+        return id;
     }
+
+    public void setId(long id) { this.id = id;}
 
     public double getBalance() {
         return balance;
     }
+
+    public void setBalance(double balance) { this.balance = balance; }
 
     public Client getOwner() {
         return owner;
@@ -24,24 +28,6 @@ public abstract class BankAccount {
 
     public void setOwner(Client owner) {
         this.owner = owner;
-    }
-
-    public void deposit(double amount) {
-        if (amount <= 0) {
-            System.out.println("Deposit must be positive.");
-            return;
-        }
-        balance += amount;
-        System.out.println("Deposited $" + amount + ". New balance: $" + balance);
-    }
-
-    public void withdraw(double amount) {
-        if (amount <= 0 || amount > balance) {
-            System.out.println("Invalid withdrawal amount.");
-            return;
-        }
-        balance -= amount;
-        System.out.println("Withdrew $" + amount + ". New balance: $" + balance);
     }
 
     public abstract String displayInfo();

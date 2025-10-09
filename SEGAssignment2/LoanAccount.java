@@ -6,6 +6,14 @@ public class LoanAccount extends BankAccount {
         this.interestRate = interestRate;
     }
 
+    public double getInterestRate() {
+        return interestRate;
+    }
+
+    public void setInterestRate(double interestRate) {
+        this.interestRate = interestRate;
+    }
+
     @Override
     public String displayInfo() {
         return "LoanAccount[id=" + getId() + ", balance=" + getBalance() + ", interestRate=" + interestRate + "]";

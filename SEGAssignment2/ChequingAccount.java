@@ -6,6 +6,14 @@ public class ChequingAccount extends BankAccount {
         this.nickName = nickName;
     }
 
+    public String getNickName() {
+        return nickName;
+    }
+
+    public void setNickName(String nickName) {
+        this.nickName = nickName;
+    }
+
     @Override
     public String displayInfo() {
         return "ChequingAccount[id=" + getId() + ", balance=" + getBalance() + ", nickName=" + nickName + "]";
