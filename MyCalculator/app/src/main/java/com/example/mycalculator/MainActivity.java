@@ -6,6 +6,7 @@ import net.objecthunter.exp4j.ExpressionBuilder;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -71,67 +72,52 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.btn0:
-                addNumber("0");
-                break;
-            case R.id.btn1:
-                addNumber("1");
-                break;
-            case R.id.btn2:
-                addNumber("2");
-                break;
-            case R.id.btn3:
-                addNumber("3");
-                break;
-            case R.id.btn4:
-                addNumber("4");
-                break;
-            case R.id.btn5:
-                addNumber("5");
-                break;
-            case R.id.btn6:
-                addNumber("6");
-                break;
-            case R.id.btn7:
-                addNumber("7");
-                break;
-            case R.id.btn8:
-                addNumber("8");
-                break;
-            case R.id.btn9:
-                addNumber("9");
-                break;
-            case R.id.btn_plus:
-                addNumber("+");
-                break;
-            case R.id.btn_minus:
-                addNumber("-");
-                break;
-            case R.id.btn_mult:
-                addNumber("*");
-                break;
-            case R.id.btn_divide:
-                addNumber("/");
-                break;
-            case R.id.btn_dot:
-                addNumber(".");
-                break;
-            case R.id.btn_equal:
-                String result;
-                try {
-                    result = evaluate(text_display.getText().toString());
-                    Log.d("DEBUG", "Evaluating: " + result);
-                    text_display.setText(result);
-                } catch (Exception e) {
-                    text_display.setText("Error");
-                }
-                break;
-            case R.id.btn_clear:
-                clear_display();
-                break;
+        int id = v.getId();
+
+        if (id == R.id.btn0) {
+            addNumber("0");
+        } else if (id == R.id.btn1) {
+            addNumber("1");
+        } else if (id == R.id.btn2) {
+            addNumber("2");
+        } else if (id == R.id.btn3) {
+            addNumber("3");
+        } else if (id == R.id.btn4) {
+            addNumber("4");
+        } else if (id == R.id.btn5) {
+            addNumber("5");
+        } else if (id == R.id.btn6) {
+            addNumber("6");
+        } else if (id == R.id.btn7) {
+            addNumber("7");
+        } else if (id == R.id.btn8) {
+            addNumber("8");
+        } else if (id == R.id.btn9) {
+            addNumber("9");
+        } else if (id == R.id.btn_plus) {
+            addNumber("+");
+        } else if (id == R.id.btn_minus) {
+            addNumber("-");
+        } else if (id == R.id.btn_mult) {
+            addNumber("*");
+        } else if (id == R.id.btn_divide) {
+            addNumber("/");
+        } else if (id == R.id.btn_dot) {
+            addNumber(".");
+        } else if (id == R.id.btn_equal) {
+            String result;
+            try {
+                result = evaluate(text_display.getText().toString());
+                Log.d("DEBUG", "Evaluating: " + result);
+                text_display.setText(result);
+            } catch (Exception e) {
+                text_display.setText("Error");
+            }
+        } else if (id == R.id.btn_clear) {
+            clear_display();
         }
     }
+
 
     private String evaluate(String expression) throws Exception {
 
