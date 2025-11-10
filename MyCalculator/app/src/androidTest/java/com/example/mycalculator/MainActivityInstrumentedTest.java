@@ -20,10 +20,25 @@ public class MainActivityInstrumentedTest {
     public ActivityScenarioRule<MainActivity> activityRule =
             new ActivityScenarioRule<>(MainActivity.class);
 
+    /**
+     * Testing the addition function, this test will succeed
+     */
     @Test
     public void testAddition() {
         onView(withId(R.id.btn1)).perform(click());
         onView(withId(R.id.btn_plus)).perform(click());
+        onView(withId(R.id.btn2)).perform(click());
+        onView(withId(R.id.btn_equal)).perform(click());
+        onView(withId(R.id.textview_input_display)).check(matches(withText("3")));
+    }
+
+    /**
+     * Testing the multiply function, this test will fail
+     */
+    @Test
+    public void testMultiply() {
+        onView(withId(R.id.btn1)).perform(click());
+        onView(withId(R.id.btn_mult)).perform(click());
         onView(withId(R.id.btn2)).perform(click());
         onView(withId(R.id.btn_equal)).perform(click());
         onView(withId(R.id.textview_input_display)).check(matches(withText("3")));

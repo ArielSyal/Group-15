@@ -6,6 +6,10 @@ import org.junit.Test;
 
 public class MathEvalTest {
 
+    /**
+     * Testing the evaluation method in the MathEval class with junit local test,
+     * this test will succeed
+     */
     @Test
     public void eval() {
         assertEquals("4", MathEval.eval("2+2"));
