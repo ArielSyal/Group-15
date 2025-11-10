@@ -8,7 +8,7 @@ public class MathEvalTest {
 
     /**
      * Testing the evaluation method in the MathEval class with junit local test,
-     * this test will succeed
+     * testing 4 different operations, this test will pass
      */
     @Test
     public void eval() {
@@ -17,6 +17,5 @@ public class MathEvalTest {
         assertEquals("8", MathEval.eval("2*4"));
         assertEquals("2", MathEval.eval("4/2"));
     }
-
 
 }

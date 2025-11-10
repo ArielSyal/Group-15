@@ -8,10 +8,10 @@
       <SelectionState runConfigName="MainActivityInstrumentedTest">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
-      <SelectionState runConfigName="useAppContext()">
+      <SelectionState runConfigName="testAddition()">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
-      <SelectionState runConfigName="testAddition()">
+      <SelectionState runConfigName="testMultiply()">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
     </selectionStates>
