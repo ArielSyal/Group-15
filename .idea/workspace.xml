@@ -21,18 +21,7 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="41134a72-19f0-46e2-a2e1-63f82d2ace4e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/ProfileManagerLab5/app/src/main/res/drawable/flag_00.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProfileManagerLab5/app/src/main/res/drawable/flag_01.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProfileManagerLab5/app/src/main/res/drawable/flag_02.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProfileManagerLab5/app/src/main/res/drawable/flag_03.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProfileManagerLab5/app/src/main/res/drawable/flag_04.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProfileManagerLab5/app/src/main/res/drawable/flag_05.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProfileManagerLab5/app/src/main/res/drawable/flag_06.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProfileManagerLab5/app/src/main/res/drawable/flag_07.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProfileManagerLab5/app/src/main/res/drawable/flag_08.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProfileManagerLab5/app/src/main/res/drawable/flag_09.png" afterDir="false" />
-    </list>
+    <list default="true" id="41134a72-19f0-46e2-a2e1-63f82d2ace4e" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -41,7 +30,7 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[DeviceId(pluginId=LocalEmulator, isTemplate=false, identifier=path=/Users/midushaak/.android/avd/Medium_Phone.avd)]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -85,7 +74,8 @@
     "android.gradle.sync.needed": "true",
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
-    "git-widget-placeholder": "main"
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/midushaak/Group-15"
   }
 }]]></component>
   <component name="RunManager">
@@ -157,9 +147,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <option name="SEARCH_ACTIVITY_IN_GLOBAL_SCOPE" value="false" />
       <option name="SKIP_ACTIVITY_VALIDATION" value="false" />
-      <method v="2">
-        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-      </method>
+      <method v="2" />
     </configuration>
   </component>
   <component name="TaskManager">
