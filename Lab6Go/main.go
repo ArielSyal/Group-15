@@ -44,7 +44,7 @@ func worker(id int, jobs <-chan Job, results chan<- Result, wg *sync.WaitGroup) 
 
 func main() {
 	urls := []string{
-		"https://example.com",
+		"https://httpbin.org/get",
 		"https://google.com",
 		"https://uottawa.ca",
 		"https://github.com",
