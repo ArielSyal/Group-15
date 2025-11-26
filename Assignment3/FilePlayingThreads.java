@@ -42,7 +42,7 @@ public class FilePlayingThreads {
         Thread t1 = new Thread(){
             @Override
             public void run(){;
-                while (true) {
+                for (String s : simpleTones) {
                     try {
                         st.play(1);
                     } catch (InterruptedException e) {
@@ -54,7 +54,7 @@ public class FilePlayingThreads {
         Thread t2 = new Thread(){
             @Override
             public void run(){
-                while (true) {
+                for (String s : simpleTones)  {
                     try {
                         st.play(2);
                     } catch (InterruptedException e) {
